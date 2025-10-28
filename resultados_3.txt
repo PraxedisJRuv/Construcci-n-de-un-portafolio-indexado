@@ -1,0 +1,42 @@
+('Bimbo', 'BIMBOA.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Cemex', 'CEMEXCPO.MX')_('Grupo Mexico SAB de CV B', 'GMEXICOB.MX') 1
+('Alfa SA A', 'ALFAA.MX')_('Alfa SA A', 'ALFAA.MX') 1
+('Alsea SA', 'ALSEA.MX')_('Grupo Carso SAB de CV', 'GCARSOA1.MX') 1
+('America Movil SAB de CV B', 'AMXB.MX')_('America Movil SAB de CV B', 'AMXB.MX') 1
+('Arca Continental SAB de CV', 'AC.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Banco del Bajio SA', 'BBAJIOO.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Becle SA De CV', 'CUERVO.MX')_('Bolsa Mexicana de Valores SA de CV', 'BOLSAA.MX') 1
+('Bolsa Mexicana de Valores SA de CV', 'BOLSAA.MX')_('Bolsa Mexicana de Valores SA de CV', 'BOLSAA.MX') 1
+('Coca Cola Femsa SAB de CV UBL', 'KOFUBL.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Corporacion Inmobiliaria Vesta SAB de CV', 'VESTA.MX')_('Grupo Carso SAB de CV', 'GCARSOA1.MX') 1
+('El Puerto de Liverpool SAB de CV', 'LIVEPOLC-1.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Fomento Economico Mexicano SAB de CV', 'FEMSAUBD.MX')_('Grupo Carso SAB de CV', 'GCARSOA1.MX') 1
+('Genomma Lab Internacional SA de CV', 'LABB.MX')_('Genomma Lab Internacional SA de CV', 'LABB.MX') 1
+('Gentera SAB de CV', 'GENTERA.MX')_('Grupo Carso SAB de CV', 'GCARSOA1.MX') 1
+('Gruma SAB B', 'GRUMAB.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Grupo Aeroportuario del Centro Norte SAB de CV', 'OMAB.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Grupo Aeroportuario del Sureste SAB de CV B', 'ASURB.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Grupo Carso SAB de CV', 'GCARSOA1.MX')_('Grupo Carso SAB de CV', 'GCARSOA1.MX') 1
+('Grupo Cementos de Chihuahua SAB de CV', 'GCC.MX')_('Grupo Mexico SAB de CV B', 'GMEXICOB.MX') 1
+('Grupo Comercial Chedraui SA de CV', 'CHDRAUIB.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Grupo Financiero Banorte O', 'GFNORTEO.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Grupo Financiero Inbursa O', 'GFINBURO.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Grupo Mexico SAB de CV B', 'GMEXICOB.MX')_('Grupo Mexico SAB de CV B', 'GMEXICOB.MX') 1
+('Grupo Televisa SAB CPO', 'TLEVISACPO.MX')_('Grupo Televisa SAB CPO', 'TLEVISACPO.MX') 1
+('Industrias Peñoles', 'PE&OLES.MX')_('Bolsa Mexicana de Valores SA de CV', 'BOLSAA.MX') 1
+('Kimberly Clark de Mexico SAB de CV A', 'KIMBERA.MX')_('Grupo Carso SAB de CV', 'GCARSOA1.MX') 1
+('La Comer SAB de CV UBC', 'LACOMERUBC.MX')_('Grupo Mexico SAB de CV B', 'GMEXICOB.MX') 1
+('Megacable Holdings SAB de CV', 'MEGACPO.MX')_('Grupo Televisa SAB CPO', 'TLEVISACPO.MX') 1
+('Orbia Advance Corporation SAB de CV', 'ORBIA.MX')_('Grupo Televisa SAB CPO', 'TLEVISACPO.MX') 1
+('Qualitas Controladora SAB de CV', 'Q.MX')_('Grupo Carso SAB de CV', 'GCARSOA1.MX') 1
+('Regional SA de CV', 'RA.MX')_('Arca Continental SAB de CV', 'AC.MX') 1
+('Walmart de Mexico SAB de CV', 'WALMEX.MX')_('America Movil SAB de CV B', 'AMXB.MX') 1
+('Alfa SA A', 'ALFAA.MX')_escogido 1
+('America Movil SAB de CV B', 'AMXB.MX')_escogido 1
+('Arca Continental SAB de CV', 'AC.MX')_escogido 1
+('Bolsa Mexicana de Valores SA de CV', 'BOLSAA.MX')_escogido 1
+('Genomma Lab Internacional SA de CV', 'LABB.MX')_escogido 1
+('Grupo Carso SAB de CV', 'GCARSOA1.MX')_escogido 1
+('Grupo Mexico SAB de CV B', 'GMEXICOB.MX')_escogido 1
+('Grupo Televisa SAB CPO', 'TLEVISACPO.MX')_escogido 1
+Obj: 28.9372
