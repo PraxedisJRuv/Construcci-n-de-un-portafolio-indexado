@@ -1,0 +1,605 @@
+import pandas as pd
+import numpy as np
+
+# Simulamos el contenido del txt como string (el que me enviaste)
+txt_content = r"""
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0xa6e51c23
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e-03, 1e-02]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-01, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72533220e+04 -3.73814451e+04  2.00e+03 7.63e-02  1.00e+06     0s
+   1   4.38199596e+02 -7.45080648e+02  1.95e+02 1.00e-07  8.57e+04     0s
+   2   3.42649570e-02 -3.39392112e+02  2.12e-01 1.87e-10  4.97e+02     0s
+   3   1.88217465e-02 -7.73480870e+01  1.81e-02 1.60e-11  8.30e+01     0s
+   4   1.80502511e-02 -3.99239550e+00  3.93e-04 3.47e-13  4.02e+00     0s
+   5   1.79532546e-02 -8.03142648e-02  9.61e-06 8.49e-15  9.83e-02     0s
+   6   1.38779601e-02 -1.13311168e-02  1.78e-06 1.55e-15  2.52e-02     0s
+   7   4.43452155e-03 -3.75772280e-03  1.78e-12 0.00e+00  8.19e-03     0s
+   8   3.48932141e-03  3.38469174e-03  5.55e-16 0.00e+00  1.05e-04     0s
+   9   3.42771026e-03  3.42760605e-03  5.55e-17 2.78e-17  1.04e-07     0s
+  10   3.42764900e-03  3.42764890e-03  1.11e-16 2.78e-17  1.04e-10     0s
+
+Barrier solved model in 10 iterations and 0.04 seconds (0.00 work units)
+Optimal objective 3.42764900e-03
+
+[0.40898612 0.59101388]
+[0.858986118188497, 0.1410138818115027]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1      0.859        0.859      0.409
+1  Asset 2      0.141        0.141      0.591
+
+Tracking Error Varianza: 0.005661400227329418
+Turnover realizado: 0.899999991983729
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0xc620f335
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-03, 9e-03]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-01, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72545338e+04 -3.73814453e+04  2.00e+03 7.04e-02  1.00e+06     0s
+   1   4.38398238e+02 -7.45608965e+02  1.95e+02 1.01e-07  8.57e+04     0s
+   2   3.56852106e-02 -3.39991425e+02  2.10e-01 1.88e-10  4.97e+02     0s
+   3   1.96446191e-02 -7.40784896e+01  1.80e-02 1.61e-11  7.96e+01     0s
+   4   1.88114428e-02 -4.13084524e+00  4.48e-04 3.99e-13  4.16e+00     0s
+   5   1.87108369e-02 -7.03768235e-02  9.60e-06 8.60e-15  8.91e-02     0s
+   6   1.40700975e-02 -9.92511052e-03  1.83e-06 1.67e-15  2.40e-02     0s
+   7   4.79674307e-03 -2.45954254e-03  1.83e-12 5.55e-17  7.26e-03     0s
+   8   3.89794467e-03  3.83030043e-03  7.22e-16 2.78e-17  6.76e-05     0s
+   9   3.86131813e-03  3.86125055e-03  0.00e+00 0.00e+00  6.76e-08     0s
+  10   3.86128159e-03  3.86128152e-03  5.55e-17 2.78e-17  6.76e-11     0s
+
+Barrier solved model in 10 iterations and 0.03 seconds (0.00 work units)
+Optimal objective 3.86128159e-03
+
+[0.41992305 0.58007695]
+[0.8699230443492991, 0.1300769556507009]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8699       0.8699     0.4199
+1  Asset 2     0.1301       0.1301     0.5801
+
+Tracking Error Varianza: 0.005661400272500928
+Turnover realizado: 0.8999999955742146
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0x57b6e998
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-03, 9e-03]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-01, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72542416e+04 -3.73814452e+04  2.00e+03 7.18e-02  1.00e+06     0s
+   1   4.38350340e+02 -7.45481584e+02  1.95e+02 1.01e-07  8.57e+04     0s
+   2   3.53410501e-02 -3.39846951e+02  2.11e-01 1.87e-10  4.97e+02     0s
+   3   1.94449576e-02 -7.48707780e+01  1.80e-02 1.60e-11  8.04e+01     0s
+   4   1.86270983e-02 -4.09800922e+00  4.34e-04 3.86e-13  4.13e+00     0s
+   5   1.85274278e-02 -7.27454930e-02  9.62e-06 8.55e-15  9.13e-02     0s
+   6   1.40388970e-02 -1.02884008e-02  1.82e-06 1.61e-15  2.43e-02     0s
+   7   4.70536681e-03 -2.80478190e-03  1.82e-12 5.55e-17  7.51e-03     0s
+   8   3.79875033e-03  3.71851618e-03  5.00e-16 2.78e-17  8.02e-05     0s
+   9   3.75405636e-03  3.75397627e-03  1.11e-16 1.39e-17  8.01e-08     0s
+  10   3.75401181e-03  3.75401173e-03  5.55e-17 1.39e-17  8.02e-11     0s
+
+Barrier solved model in 10 iterations and 0.03 seconds (0.00 work units)
+Optimal objective 3.75401181e-03
+
+[0.41728598 0.58271402]
+[0.8672859771415419, 0.13271402285845815]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8673       0.8673     0.4173
+1  Asset 2     0.1327       0.1327     0.5827
+
+Tracking Error Varianza: 0.005661400259057044
+Turnover realizado: 0.8999999945056192
+Set parameter OutputFlag to value 1
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0x648ff27a
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e-03, 1e-02]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-01, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72527521e+04 -3.73814451e+04  2.00e+03 7.91e-02  1.00e+06     0s
+   1   4.38106161e+02 -7.44832111e+02  1.95e+02 9.99e-08  8.57e+04     0s
+   2   3.36033491e-02 -3.39110083e+02  2.13e-01 1.87e-10  4.98e+02     0s
+   3   1.84395760e-02 -7.88718320e+01  1.81e-02 1.59e-11  8.46e+01     0s
+   4   1.76954935e-02 -3.92590999e+00  3.67e-04 3.23e-13  3.95e+00     0s
+   5   1.75999495e-02 -8.50855652e-02  9.56e-06 8.38e-15  1.03e-01     0s
+   6   1.37407968e-02 -1.19191800e-02  1.73e-06 1.55e-15  2.57e-02     0s
+   7   4.28123648e-03 -4.24839808e-03  1.73e-12 5.55e-17  8.53e-03     0s
+   8   3.30794701e-03  3.18703035e-03  5.55e-16 0.00e+00  1.21e-04     0s
+   9   3.23400014e-03  3.23388008e-03  1.11e-16 9.45e-18  1.20e-07     0s
+  10   3.23392680e-03  3.23392668e-03  5.55e-17 4.28e-19  1.20e-10     0s
+
+Barrier solved model in 10 iterations and 0.03 seconds (0.00 work units)
+Optimal objective 3.23392680e-03
+
+[0.40384137 0.59615863]
+[0.8538413675484647, 0.1461586324515354]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8538       0.8538     0.4038
+1  Asset 2     0.1462       0.1462     0.5962
+
+Tracking Error Varianza: 0.005661400202682835
+Turnover realizado: 0.8999999900246793
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0xa61a0a4d
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e-03, 9e-03]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-01, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72534556e+04 -3.73814452e+04  2.00e+03 7.56e-02  1.00e+06     0s
+   1   4.38221489e+02 -7.45138880e+02  1.95e+02 1.00e-07  8.57e+04     0s
+   2   3.44205751e-02 -3.39458182e+02  2.12e-01 1.87e-10  4.97e+02     0s
+   3   1.89117564e-02 -7.69897827e+01  1.81e-02 1.60e-11  8.26e+01     0s
+   4   1.81336950e-02 -4.00789209e+00  3.98e-04 3.52e-13  4.04e+00     0s
+   5   1.80363356e-02 -7.92048984e-02  9.62e-06 8.49e-15  9.72e-02     0s
+   6   1.39063994e-02 -1.11876718e-02  1.79e-06 1.61e-15  2.51e-02     0s
+   7   4.47212630e-03 -3.63177538e-03  1.79e-12 6.94e-18  8.10e-03     0s
+   8   3.53298120e-03  3.43202070e-03  5.55e-16 8.67e-18  1.01e-04     0s
+   9   3.47404700e-03  3.47394640e-03  5.55e-17 2.78e-17  1.01e-07     0s
+  10   3.47398838e-03  3.47398828e-03  5.55e-17 8.20e-18  1.01e-10     0s
+
+Barrier solved model in 10 iterations and 0.03 seconds (0.00 work units)
+Optimal objective 3.47398838e-03
+
+[0.41019157 0.58980843]
+[0.860191561535516, 0.1398084384644841]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8602       0.8602     0.4102
+1  Asset 2     0.1398       0.1398     0.5898
+
+Tracking Error Varianza: 0.005661400232514212
+Turnover realizado: 0.8999999923958454
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0xbc59cf43
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-03, 9e-03]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-01, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72544962e+04 -3.73814452e+04  2.00e+03 7.06e-02  1.00e+06     0s
+   1   4.38392080e+02 -7.45592589e+02  1.95e+02 1.01e-07  8.57e+04     0s
+   2   3.56409034e-02 -3.39972852e+02  2.10e-01 1.88e-10  4.97e+02     0s
+   3   1.96189069e-02 -7.41804931e+01  1.80e-02 1.61e-11  7.97e+01     0s
+   4   1.87877162e-02 -4.12664925e+00  4.46e-04 3.98e-13  4.16e+00     0s
+   5   1.86872329e-02 -7.06802943e-02  9.60e-06 8.55e-15  8.94e-02     0s
+   6   1.40667208e-02 -9.97284850e-03  1.83e-06 1.61e-15  2.40e-02     0s
+   7   4.78487004e-03 -2.50508778e-03  1.83e-12 0.00e+00  7.29e-03     0s
+   8   3.88802842e-03  3.81406339e-03  6.11e-16 1.56e-17  7.40e-05     0s
+   9   3.84743460e-03  3.84736073e-03  1.67e-16 2.20e-17  7.39e-08     0s
+  10   3.84739411e-03  3.84739404e-03  1.11e-16 2.78e-17  7.39e-11     0s
+
+Barrier solved model in 10 iterations and 0.03 seconds (0.00 work units)
+Optimal objective 3.84739411e-03
+
+[0.41958402 0.58041598]
+[0.8695840165155738, 0.130415983484426]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8696       0.8696     0.4196
+1  Asset 2     0.1304       0.1304     0.5804
+
+Tracking Error Varianza: 0.005661400266353598
+Turnover realizado: 0.899999995085591
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0x2c928f48
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e-03, 6e-03]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-01, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72584162e+04 -3.73814456e+04  2.00e+03 5.14e-02  1.00e+06     0s
+   1   4.39034812e+02 -7.47301393e+02  1.95e+02 1.05e-07  8.57e+04     0s
+   2   4.03619526e-02 -3.41909493e+02  2.05e-01 1.89e-10  4.95e+02     0s
+   3   2.22904120e-02 -6.29035702e+01  1.75e-02 1.61e-11  6.77e+01     0s
+   4   2.11860898e-02 -3.07967802e+00  4.94e-04 4.56e-13  3.11e+00     0s
+   5   2.10485396e-02 -3.69270964e-02  9.19e-06 8.44e-15  5.80e-02     0s
+   6   8.19365225e-03 -1.37040492e-02  5.33e-07 4.44e-16  2.19e-02     0s
+   7   5.69213473e-03  5.18647642e-03  2.04e-09 5.55e-17  5.06e-04     0s
+   8   5.45069760e-03  5.45017197e-03  2.29e-14 2.91e-19  5.26e-07     0s
+   9   5.45044239e-03  5.45044186e-03  5.55e-17 0.00e+00  5.26e-10     0s
+
+Barrier solved model in 9 iterations and 0.02 seconds (0.00 work units)
+Optimal objective 5.45044239e-03
+
+[0.45496522 0.54503478]
+[0.904965212411077, 0.09503478758892292]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1      0.905        0.905      0.455
+1  Asset 2      0.095        0.095      0.545
+
+Tracking Error Varianza: 0.005661400014594156
+Turnover realizado: 0.899999975074331
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0x0d864610
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [9e-04, 6e-03]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [9e-02, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72593482e+04 -3.73814456e+04  2.00e+03 4.69e-02  1.00e+06     0s
+   1   4.39187650e+02 -7.47707593e+02  1.95e+02 1.06e-07  8.57e+04     0s
+   2   4.15132448e-02 -3.42369442e+02  2.04e-01 1.89e-10  4.94e+02     0s
+   3   2.29599169e-02 -6.02114140e+01  1.74e-02 1.62e-11  6.49e+01     0s
+   4   2.17696097e-02 -3.03870454e+00  4.90e-04 4.55e-13  3.07e+00     0s
+   5   2.16294659e-02 -3.25450042e-02  8.62e-06 7.99e-15  5.42e-02     0s
+   6   8.54565535e-03 -9.57851102e-03  1.26e-07 1.11e-16  1.81e-02     0s
+   7   6.04684398e-03  5.65217893e-03  1.16e-10 0.00e+00  3.95e-04     0s
+   8   5.87742076e-03  5.87702267e-03  3.77e-15 5.55e-17  3.98e-07     0s
+   9   5.87725018e-03  5.87724978e-03  2.78e-17 5.55e-17  3.98e-10     0s
+
+Barrier solved model in 9 iterations and 0.02 seconds (0.00 work units)
+Optimal objective 5.87725018e-03
+
+[0.46337717 0.53662283]
+[0.9133771575042268, 0.08662284249577282]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.9134       0.9134     0.4634
+1  Asset 2     0.0866       0.0866     0.5366
+
+Tracking Error Varianza: 0.005661400127848659
+Turnover realizado: 0.8999999840764378
+Set parameter OutputFlag to value 1
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+C:\Users\praxy\AppData\Local\Temp\ipykernel_25996\735475603.py:24: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  r[k][j] = (temp[-1]/temp[0] - 1)*weights[j]
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0xa0239e9a
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [7e-04, 5e-03]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [7e-02, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   3.72615047e+04 -3.73814457e+04  2.00e+03 3.63e-02  1.00e+06     0s
+   1   4.39541328e+02 -7.48647349e+02  1.95e+02 1.08e-07  8.57e+04     0s
+   2   4.42195829e-02 -3.43432945e+02  2.01e-01 1.90e-10  4.93e+02     0s
+   3   2.47740918e-02 -5.59824901e+01  1.71e-02 1.62e-11  6.05e+01     0s
+   4   2.33423129e-02 -2.86130687e+00  4.36e-04 4.12e-13  2.89e+00     0s
+   5   2.32020657e-02 -2.83323204e-02  7.75e-06 7.27e-15  5.15e-02     0s
+   6   8.77173088e-03 -1.11502131e-02  1.83e-07 2.22e-16  1.99e-02     0s
+   7   7.15733080e-03  6.80941978e-03  1.50e-10 4.72e-18  3.48e-04     0s
+   8   6.93229416e-03  6.93194926e-03  3.00e-15 2.47e-18  3.45e-07     0s
+   9   6.93207150e-03  6.93207116e-03  2.78e-17 2.98e-17  3.45e-10     0s
+
+Barrier solved model in 9 iterations and 0.03 seconds (0.00 work units)
+Optimal objective 6.93207150e-03
+
+[0.48284065 0.51715935]
+[0.9328406379314089, 0.0671593620685911]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.9328       0.9328     0.4828
+1  Asset 2     0.0672       0.0672     0.5172
+
+Tracking Error Varianza: 0.005661400090960121
+Turnover realizado: 0.8999999811443283
+Set parameter OutputFlag to value 1
+Gurobi Optimizer version 12.0.0 build v12.0.0rc1 (win64 - Windows 11.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i5-1335U, instruction set [SSE2|AVX|AVX2]
+Thread count: 10 physical cores, 12 logical processors, using up to 12 threads
+
+Optimize a model with 8 rows, 4 columns and 14 nonzeros
+Model fingerprint: 0x1f9e23dc
+Model has 3 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [6e-04, 3e-03]
+  QObjective range [5e-03, 6e-02]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [5e-02, 1e+00]
+Presolve removed 3 rows and 1 columns
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 10 nonzeros
+Presolved model has 3 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 1
+ AA' NZ     : 1.500e+01
+ Factor NZ  : 2.100e+01
+ Factor Ops : 9.100e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   9.31778058e+03 -9.37860919e+03  2.00e+03 5.55e-02  1.00e+06     0s
+   1   4.45919242e+01 -2.28909364e+02  8.12e+01 1.08e-07  3.36e+04     0s
+   2   5.25952779e-02 -1.85647191e+02  3.24e-01 7.06e-10  5.84e+02     0s
+   3   2.49916730e-02 -6.54513143e+01  3.24e-07 7.77e-16  1.31e+02     0s
+   4   2.49859446e-02 -8.88923164e-02  2.40e-10 1.11e-16  2.28e-01     0s
+   5   2.19310909e-02 -1.86528835e-02  7.52e-11 0.00e+00  8.12e-02     0s
+   6   9.47471632e-03 -2.24685907e-03  1.11e-16 1.11e-16  2.34e-02     0s
+   7   7.91780775e-03  7.79281885e-03  1.11e-16 6.94e-18  2.50e-04     0s
+   8   7.85974414e-03  7.85961890e-03  2.22e-16 1.11e-16  2.50e-07     0s
+   9   7.85968592e-03  7.85968579e-03  1.11e-16 1.11e-16  2.50e-10     0s
+
+Barrier solved model in 9 iterations and 0.04 seconds (0.00 work units)
+Optimal objective 7.85968592e-03
+
+[0.49867775 0.50132225]
+[0.9486777492601149, 0.0513222507398853]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.9487       0.9487     0.4987
+1  Asset 2     0.0513       0.0513     0.5013
+
+Tracking Error Varianza: 0.005661400270509952
+Turnover realizado: 0.8999999954159609
+
+
+[0.48074255 0.51925745]
+[0.9307425473205236, 0.0692574526794766]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.9307       0.9307     0.4807
+1  Asset 2     0.0693       0.0693     0.5193
+
+Tracking Error Varianza: 0.005661400322240114
+Turnover realizado: 0.8999999995277654
+"""
+
+# Paso 1: Convertirlo a lista de líneas
+lines = [line.strip() for line in txt_content.split("\n") if line.strip()]
+
+# Paso 2: Extraer los datos
+# Asumiendo que cada línea tiene: Nombre, Rendimiento, Tracking Error, Varianza, Turnover
+# Se puede ajustar según el formato real
+data = []
+for line in lines:
+    parts = line.split()  # separa por espacios, ajustar si hay comas u otro separador
+    if len(parts) >= 5:
+        nombre = parts[0]
+        rendimiento = float(parts[1])
+        tracking_error = float(parts[2])
+        varianza = float(parts[3])
+        turnover = float(parts[4])
+        data.append([nombre, rendimiento, tracking_error, varianza, turnover])
+
+# Paso 3: Crear DataFrame wide
+df = pd.DataFrame(data, columns=['Cartera', 'Rendimiento', 'Tracking Error', 'Varianza', 'Turnover'])
+
+# Paso 4: Mostrar resultados
+print(df)
