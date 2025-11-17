@@ -1,0 +1,120 @@
+[0.80898612 0.19101388]
+[0.858986118188497, 0.1410138818115027]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1      0.859        0.859      0.809
+1  Asset 2      0.141        0.141      0.191
+
+Tracking Error Varianza: 6.989383026648205e-05
+Turnover realizado: 0.09999999932352346
+
+[0.81992304 0.18007696]
+[0.8699230443492991, 0.1300769556507009]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8699       0.8699     0.8199
+1  Asset 2     0.1301       0.1301     0.1801
+
+Tracking Error Varianza: 6.98938298704831e-05
+Turnover realizado: 0.09999999904023729
+
+[0.80384137 0.19615863]
+[0.8538413675484647, 0.1461586324515354]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8538       0.8538     0.8038
+1  Asset 2     0.1462       0.1462     0.1962
+
+Tracking Error Varianza: 6.989383024368878e-05
+Turnover realizado: 0.09999999930721823
+
+[0.81728598 0.18271402]
+[0.8672859771415419, 0.13271402285845815]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8673       0.8673     0.8173
+1  Asset 2     0.1327       0.1327     0.1827
+
+Tracking Error Varianza: 6.989382986038645e-05
+Turnover realizado: 0.09999999903301199
+
+[0.81019156 0.18980844]
+[0.860191561535516, 0.1398084384644841]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8602       0.8602     0.8102
+1  Asset 2     0.1398       0.1398     0.1898
+
+Tracking Error Varianza: 6.98938302723198e-05
+Turnover realizado: 0.09999999932770395
+
+[0.81958402 0.18041598]
+[0.8695840165155738, 0.130415983484426]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.8696       0.8696     0.8196
+1  Asset 2     0.1304       0.1304     0.1804
+
+Tracking Error Varianza: 6.989382986913881e-05
+Turnover realizado: 0.09999999903927484
+
+[0.85496521 0.14503479]
+[0.904965212411077, 0.09503478758892292]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1      0.905        0.905      0.855
+1  Asset 2      0.095        0.095      0.145
+
+Tracking Error Varianza: 6.98938287061523e-05
+Turnover realizado: 0.09999999820730918
+
+[0.86337716 0.13662284]
+[0.9133771575042268, 0.08662284249577282]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.9134       0.9134     0.8634
+1  Asset 2     0.0866       0.0866     0.1366
+
+Tracking Error Varianza: 6.989382882178253e-05
+Turnover realizado: 0.09999999829002768
+
+[0.88284064 0.11715936]
+[0.9328406379314089, 0.0671593620685911]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.9328       0.9328     0.8828
+1  Asset 2     0.0672       0.0672     0.1172
+
+Tracking Error Varianza: 6.989382911993851e-05
+Turnover realizado: 0.09999999850331959
+
+[0.89867775 0.10132225]
+[0.9486777492601149, 0.0513222507398853]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.9487       0.9487     0.8987
+1  Asset 2     0.0513       0.0513     0.1013
+
+Tracking Error Varianza: 6.989383103487578e-05
+Turnover realizado: 0.09999999987320479
+
+[0.88074255 0.11925745]
+[0.9307425473205236, 0.0692574526794766]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.9307       0.9307     0.8807
+1  Asset 2     0.0693       0.0693     0.1193
+
+Tracking Error Varianza: 6.989382908784412e-05
+Turnover realizado: 0.09999999848035855

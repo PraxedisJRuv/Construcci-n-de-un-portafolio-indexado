@@ -1,0 +1,12 @@
+[0.27727275 0.12121218 0.12121258 0.48030249]
+[0.7272727272727273, 0.12121212121212122, 0.12121212121212122, 0.030303030303030304]
+
+ Resultados del portafolio optimizado
+     Asset  w_current  w_benchmark  w_optimal
+0  Asset 1     0.7273       0.7273     0.2773
+1  Asset 2     0.1212       0.1212     0.1212
+2  Asset 3     0.1212       0.1212     0.1212
+3  Asset 4     0.0303       0.0303     0.4803
+
+Tracking Error Varianza: 0.004440479092064024
+Turnover realizado: 0.8999999562570555
